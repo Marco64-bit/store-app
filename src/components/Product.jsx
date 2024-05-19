@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, {useState, useEffect} from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 function Product() {
@@ -27,7 +28,7 @@ return (
                             <div className="card-body" style={{ width: '100%', height:'100%' }}>
                             <h5 className="card-title mt-2" style={{ height: '3rem', overflow: 'hidden' }}>{product.title}</h5>
                             <p className="card-text mt-3"><h3>{product.price}$</h3></p>
-                            <a href="#" className='btn btn-primary'>Details</a>
+                            <Link to={`details/${product.id}`} className='btn btn-primary'>Details</Link>
                                 
                             </div>
                         </div>

@@ -1,17 +1,22 @@
 import Product from "./components/Product";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Details from "./components/Details";
+import {Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <div className="container">
-        <div className="row">
-          <Product />
-        </div>
-      </div>
-      <footer className="mt-5">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Product />}/>
+        <Route path="details/:id" element={<Details />}/>
+      </Routes>
+          
+
+
         <Footer />
-      </footer>
+
     </>
   );
 }
